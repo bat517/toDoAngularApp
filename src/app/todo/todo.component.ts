@@ -19,6 +19,7 @@ export class TodoComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.tasksData.error = true;
   }
   addTaskName(value)
   {
