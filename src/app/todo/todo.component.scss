@@ -1,0 +1,39 @@
+.container-cust {
+    height: 85vh;
+}
+
+.addition-color {
+    background-color: white;
+}
+
+.status-completed {
+    background-color: green;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.status-not-completed {
+    background-color: red;
+    text-align: center;
+    border-radius: 20px;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+}
+
+.data-list {
+    max-height: 444px;
+    overflow-y: scroll;
+}
+
+.heading {
+    border-bottom: 1px solid;
+    position: sticky;
+    top: 0;
+    background-color: #eca154;
+    z-index: 9;
+    color: white;
+}

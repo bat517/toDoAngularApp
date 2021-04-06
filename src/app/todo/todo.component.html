@@ -1,0 +1,218 @@
+<div class="container container-cust">
+    <div class="row align-items-center mt-3">
+        <div class="col-3"></div>
+        <div class="col-6 pb-3 addition-color" style="border-radius: 10px;">
+            <div class="mb-3 p-2" style="text-align: left;">
+                Add new task
+            </div>
+            <form #addForm="ngForm" (ngSubmit)="addTaskName(addForm.value)">
+                <div class="form-group d-flex justify-content-center align-items-center mb-3 ">
+                    <input type='text' class="form-control" style="width: 60%;display: inline-block; margin-right: 10px;" name="task" ngModel (keyup)="validate(addForm.value)">
+                    <button type="submit" class='btn btn-primary' style="font-size: 10px;" data-toggle="modal" data-target="#exampleModal" [disabled]="tasksData.error" [title]="tasksData.error? 'Enter task name':''">Add Task</button>
+                </div>
+                <span *ngIf="tasksData.error" style="color: red;" style="font-size: 10px;">Taskname cannot be empty</span>
+            </form>
+        </div>
+        <div class="col-3"></div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-3"></div>
+
+        <!-- list of tasks are written below -->
+        <div *ngIf="false" class="col-6">
+            No tasks present. Cherio
+        </div>
+        <div *ngIf="true" class="col-6 addition-color data-list" style="border-radius: 10px;">
+            <div class="row heading p-2" style="border-bottom: 1px solid;">
+                <div class="col-1">
+                    <!-- cb -->
+                </div>
+                <div class="col-3">
+                    Tasks.
+                </div>
+                <div class="col-4">
+                    Description
+                </div>
+                <div class="col-2">
+                    Status
+                </div>
+                <div class="col-2">
+                    Actions
+                </div>
+            </div>
+
+            <div class="row" style="padding: 5px;">
+                <div class="col-1">
+                    <input type="checkbox">
+                </div>
+                <div class="col-3">
+                    Tasks 1
+                </div>
+                <div class="col-4">
+                    some description which is very long and long and long to read and understand lets see.
+                </div>
+                <div class="col-2">
+                    <div class="status-completed">
+                        done
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-trash-alt" style="margin-left: 13px; margin-right: 5px;"></i>
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+
+            <div class="row" style="padding: 5px;">
+                <div class="col-1">
+                    <input type="checkbox">
+                </div>
+                <div class="col-3">
+                    Tasks 1
+                </div>
+                <div class="col-4">
+                    some description which is very long and long and long to read and understand lets see.
+                </div>
+                <div class="col-2">
+                    <div class="status-not-completed">
+                        done
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-trash-alt" style="margin-left: 13px; margin-right: 5px;"></i>
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            <div class="row" style="padding: 5px;">
+                <div class="col-1">
+                    <input type="checkbox">
+                </div>
+                <div class="col-3">
+                    Tasks 1
+                </div>
+                <div class="col-4">
+                    some description which is very long and long and long to read and understand lets see.
+                </div>
+                <div class="col-2">
+                    <div class="status-not-completed">
+                        done
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-trash-alt" style="margin-left: 13px; margin-right: 5px;"></i>
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            <div class="row" style="padding: 5px;">
+                <div class="col-1">
+                    <input type="checkbox">
+                </div>
+                <div class="col-3">
+                    Tasks 1
+                </div>
+                <div class="col-4">
+                    some description which is very long and long and long to read and understand lets see.
+                </div>
+                <div class="col-2">
+                    <div class="status-not-completed">
+                        done
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-trash-alt" style="margin-left: 13px; margin-right: 5px;"></i>
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            <div class="row" style="padding: 5px;">
+                <div class="col-1">
+                    <input type="checkbox">
+                </div>
+                <div class="col-3">
+                    Tasks 1
+                </div>
+                <div class="col-4">
+                    some description which is very long and long and long to read and understand lets see.
+                </div>
+                <div class="col-2">
+                    <div class="status-not-completed">
+                        done
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-trash-alt" style="margin-left: 13px; margin-right: 5px;"></i>
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            <div class="row" style="padding: 5px;">
+                <div class="col-1">
+                    <input type="checkbox">
+                </div>
+                <div class="col-3">
+                    Tasks 1
+                </div>
+                <div class="col-4">
+                    some description which is very long and long and long to read and understand lets see.
+                </div>
+                <div class="col-2">
+                    <div class="status-not-completed">
+                        done
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-trash-alt" style="margin-left: 13px; margin-right: 5px;"></i>
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+            <div class="row" style="padding: 5px;">
+                <div class="col-1">
+                    <input type="checkbox">
+                </div>
+                <div class="col-3">
+                    Tasks 1
+                </div>
+                <div class="col-4">
+                    some description which is very long and long and long to read and understand lets see.
+                </div>
+                <div class="col-2">
+                    <div class="status-not-completed">
+                        done
+                    </div>
+                </div>
+                <div class="col-2">
+                    <i class="fa fa-trash-alt" style="margin-left: 13px; margin-right: 5px;"></i>
+                    <i class="fas fa-edit"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-3"></div>
+    </div>
+</div>
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">{{tasksData.taskName}}</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="tasks">
+                    <label>Description</label>
+                    <textarea class="form-control" formControlName="description">
+                        
+                    </textarea>
+                    <label>Status</label>
+                    <select class="form-control" formControlName="status">
+                        <option value="default">--Select a country--</option>
+                        <option>Completed</option>
+                        <option>Not Completed</option>
+                    </select>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal" style="font-size: 10px;">Close</button>
+                <button type="button" class="btn btn-primary" style="font-size: 10px;">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
